@@ -12,10 +12,10 @@ import io.restassured.response.Response;
 
 
 
-public class UserJasonTest {
+public class UserJsonTest {
 
 	@Test
-	public void jasonPrimeiroNivel() {
+	public void jsonPrimeiroNivel() {
 		RestAssured
 		.given()
 		.when()
@@ -31,7 +31,7 @@ public class UserJasonTest {
 	
 	@SuppressWarnings("removal")
 	@Test
-	public void jasonPrimeiroNivel_II() {
+	public void jsonPrimeiroNivel_II() {
 		Response response = RestAssured.request(Method.GET,"https://restapi.wcaquino.me/users/1");
 		
 		// path
@@ -47,4 +47,6 @@ public class UserJasonTest {
 		Assert.assertEquals(1, id);
 		
 	}
+	
+	
 }
