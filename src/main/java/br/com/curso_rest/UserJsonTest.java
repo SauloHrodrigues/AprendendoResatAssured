@@ -48,5 +48,18 @@ public class UserJsonTest {
 		
 	}
 	
+	@Test
+	public void jsonSegundoNivel() {
+		RestAssured
+		.given()
+		.when()
+			.get("https://restapi.wcaquino.me/users/2")
+		.then()
+			.statusCode(200)
+			.body("id", Matchers.is(2))
+			.body("name", Matchers.containsString("Joaquina"))
+			.body("endereco.rua", Matchers.is("Rua dos bobos"))
+		;
+	}
 	
 }
