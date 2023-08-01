@@ -73,6 +73,15 @@ public class OlaMundoTests {
 	
 	@Test
 	public void devoValidarBody() {
-		
+		RestAssured
+		.given()
+		.when()
+			.get("http://restapi.wcaquino.me/ola")
+		.then()
+			.statusCode(200)
+			.body(Matchers.is("Ola Mundo!"))
+			.body(Matchers.containsString("Ola"))
+			.body(Matchers.is(Matchers.not(Matchers.nullValue())));
+			
 	}
 }
