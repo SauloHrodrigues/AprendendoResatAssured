@@ -1,5 +1,7 @@
 package br.com.curso_rest;
 
+import java.util.List;
+
 import org.hamcrest.Matchers;
 import org.hamcrest.number.IsCloseTo;
 import org.junit.Assert;
@@ -131,5 +133,20 @@ public class UserJsonTest {
 		
 		;
 	}
-
+	
+	@Test
+	public void unindoJsonPathJava() {
+		List<String> nomes =
+			RestAssured
+			.given()
+			.when()
+			.get("https://restapi.wcaquino.me/users")
+			.then()
+			.statusCode(200)
+			.extract().path("name.findAll{it.startsWith('Maria')}")
+			;
+		for(String nome : nomes) {
+			System.out.println("nome: "+ nome.intern());
+		}
+	}
 }
