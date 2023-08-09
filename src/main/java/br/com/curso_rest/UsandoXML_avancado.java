@@ -60,13 +60,14 @@ public class UsandoXML_avancado {
  */
 		ArrayList<NodeImpl> nomes = RestAssured
 	
-				.given()
-				.when()
-					.get("http://restapi.wcaquino.me/usersXML")
-				.then()
-					.statusCode(200)
-					.extract().path("users.user.name.findAll{it.toString().contains('n')}") // Em XML os valores são Strings
-					;
+			.given()
+			.when()
+				.get("http://restapi.wcaquino.me/usersXML")
+			.then()
+				.statusCode(200)
+				.extract().path("users.user.name.findAll{it.toString().contains('n')}") // Em XML os valores são Strings
+		;
+		
 		System.out.println(nomes.get(0));
 		System.out.println(nomes.get(1));
 		Assert.assertEquals(2, nomes.size());
