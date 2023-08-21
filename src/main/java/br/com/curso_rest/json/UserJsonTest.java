@@ -1,4 +1,4 @@
-package br.com.curso_rest;
+package br.com.curso_rest.json;
 
 import java.util.List;
 

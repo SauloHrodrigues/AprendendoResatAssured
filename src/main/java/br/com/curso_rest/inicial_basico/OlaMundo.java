@@ -1,4 +1,4 @@
-package br.com.curso_rest;
+package br.com.curso_rest.inicial_basico;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;

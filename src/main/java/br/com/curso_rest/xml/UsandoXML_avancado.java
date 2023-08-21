@@ -1,4 +1,4 @@
-package br.com.curso_rest;
+package br.com.curso_rest.xml;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package br.com.curso_rest;
+package br.com.curso_rest.inicial_basico;
 
 import java.util.ArrayList;
 import java.util.Arrays;
